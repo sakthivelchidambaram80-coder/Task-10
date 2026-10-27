@@ -1,0 +1,115 @@
+
+.navbar {
+  height: 76px;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-inner {
+  width: min(1160px, calc(100% - 40px));
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--heading);
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: #e5f5f5;
+  color: var(--primary);
+  border-radius: 12px;
+}
+
+.brand-accent {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links > a:not(.nav-cta) {
+  color: #586773;
+}
+
+.nav-links > a.active {
+  color: var(--primary);
+}
+
+.nav-cta {
+  padding: 12px 18px;
+  border-radius: 9px;
+  background: var(--primary);
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--heading);
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    height: 68px;
+  }
+
+  .nav-inner {
+    width: calc(100% - 32px);
+  }
+
+  .brand {
+    font-size: 21px;
+  }
+
+  .menu-toggle {
+    display: grid;
+    place-items: center;
+    padding: 8px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    padding: 20px 16px;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 12px 18px #10203012;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-cta {
+    text-align: center;
+  }
+}

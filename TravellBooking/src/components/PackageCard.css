@@ -1,0 +1,136 @@
+
+.package-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-width: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px #18334412;
+}
+
+.package-image-link {
+  position: relative;
+  display: block;
+  height: 215px;
+  overflow: hidden;
+}
+
+.package-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.package-card:hover .package-image {
+  transform: scale(1.04);
+}
+
+.package-category {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  background: white;
+  color: var(--primary-dark);
+  border-radius: 7px;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.package-content {
+  padding: 18px;
+}
+
+.package-location,
+.package-meta,
+.package-meta span {
+  display: flex;
+  align-items: center;
+}
+
+.package-location {
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.package-rating {
+  margin-left: auto;
+  color: #d89b27;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.package-content h3 {
+  margin: 13px 0;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.package-meta {
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid var(--border);
+}
+
+.package-meta span {
+  gap: 5px;
+}
+
+.package-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  gap: 8px;
+}
+
+.price-label {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.package-price {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--heading);
+}
+
+.package-price span {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.package-arrow {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #eaf5f5;
+  color: var(--primary);
+}
+
+@media (max-width: 400px) {
+  .package-image-link {
+    height: 190px;
+  }
+
+  .package-content {
+    padding: 14px;
+  }
+}
